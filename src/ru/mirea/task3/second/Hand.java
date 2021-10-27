@@ -34,5 +34,7 @@ public class Hand extends Human {
         return hurt;
     }
 
-
+    public String toString(){
+        return "part: hand, side: " + this.side + ", number of fingers: " + this.fingers +", is it hurts: "+isHurt();
+    }
 }

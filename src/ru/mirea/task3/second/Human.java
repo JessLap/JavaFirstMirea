@@ -32,6 +32,9 @@ public class Human {
     }
     public boolean isHurt(){return false;};
 
+    public String toString(){
+        return "skin color: "+ this.skinColor + ", age: " + this.age;
+    }
 
 
 }
