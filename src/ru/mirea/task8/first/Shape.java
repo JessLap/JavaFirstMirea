@@ -1,19 +1,25 @@
 package ru.mirea.task8.first;
-import java.awt.*;
 
-public abstract class Shape {
+import java.awt.Color;
 
- protected int xPosition;
- protected int yPosition;
- protected Color color;
+abstract public class Shape {
+    protected Color color;
+    protected int x = 0;
+    protected int y = 0;
 
- public Shape(){};
- public Shape(Graphics g){
-  xPosition = (int)Math.random()*150;
-  yPosition = (int)Math.random()*150;
-  Color color = new Color((int)(Math.random() * 0x1000000));
-  paintComponent(g);
- };
+    public Color getColor() { return color; }
+    public void setColor(Color color) { this.color = color; }
 
- public void paintComponent(Graphics g){};
+    public void setXY(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
+
+    public int getX() {
+        return x;
+    }
+
+    public int getY() {
+        return y;
+    }
 }

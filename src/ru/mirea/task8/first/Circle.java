@@ -1,24 +1,20 @@
 package ru.mirea.task8.first;
-import javax.swing.*;
-import java.awt.*;
-import java.awt.event.*;
+
+
 public class Circle extends Shape{
-    private int width;
-    private int height;
+    private double radius = 1.0f;
 
+    public Circle(){}
 
-    public Circle(Graphics g){
+    public Circle(double radius) {
+        this.radius = radius;
+    }
 
-        width = (int)Math.random()*150;
-        height = (int)Math.random()*150;;
+    public void setRadius(double radius) {
+        this.radius = radius;
+    }
 
-    };
-    @Override
-    public void paintComponent(Graphics g){
-        g.setColor(color);
-        g.fillOval(xPosition, yPosition, width, height);
-
+    public double getRadius() {
+        return radius;
     }
 }
-
-
